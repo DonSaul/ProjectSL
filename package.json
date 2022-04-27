@@ -1,0 +1,22 @@
+{
+  "name": "projectsl",
+  "version": "1.0.0",
+  "description": "Sign Language Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonSaul/ProjectSL.git"
+  },
+  "author": "Equipo 2 ADBDD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonSaul/ProjectSL/issues"
+  },
+  "homepage": "https://github.com/DonSaul/ProjectSL#readme",
+  "devDependencies": {
+    "electron": "^18.1.0"
+  }
+}
