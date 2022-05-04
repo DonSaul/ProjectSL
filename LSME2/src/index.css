@@ -5,3 +5,49 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #50035f;
+  left: -200px;
+  transition: all 500ms linear;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+#sidebar ul li {
+  color: rgba(230, 230, 230, .9);
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1px solid rgba(120, 10, 134, 0.3);
+  text-align: center;
+}
+
+.logo {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto; 
+}
+
+#sidebar .toggle-btn {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#sidebar .toggle-btn span {
+  display: block;
+  width: 40px;
+  text-align: center;
+  font-size: 30px;
+  border: 3px solid rgb(77, 2, 83);
+}
