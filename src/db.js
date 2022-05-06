@@ -27,10 +27,10 @@ function logintest(){
                     console.log(user + password);
                     var flag = 0;
                     for (let i = 0; i < rows.length; i++) {
-                        console.log(i);
+                 
                         if (user === rows[i].user && password === rows[i].pass){
-                        alert('existe');
-                        document.location.href = 'hotel.html';
+                        console.log('Existe');
+                        document.location.href = 'Menu.html';
                         flag = 1;
                         }
                     }
