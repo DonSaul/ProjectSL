@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LSM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="extra.css" />
+  
+  </head>
+  <body>
+    <div id="Header"> <h1>Bienvenido</h1> </div><br>
+   
+
+    <div class="container" >  
+        <div class="row">
+          <div class="col-sm" ></div>
+          <div class="col-sm" id="login2">
+            <p id="header2">Inicia sesión</p>
+              <label for="User" id ="lblog">Usuario</label>
+              <input type="text" class="form-control" id="user" placeholder="Nombre de usario" required>
+              <label for="User"id ="lblog" >Contraseña</label>
+              <input type="password" class="form-control" id="pass" placeholder="Contraseña"  required>
+              <br>
+              <div class="col" id="botonera" >
+                <a class="btn btn-primary btn-sm "  role="button" id="btnlog" onclick="logintest()" > Iniciar sesión</a>
+             
+                <a class="btn btn-primary btn-sm " href="Signup.html" role="button" id="btnreg"> Registrate</a>
+             
+               
+              </div>
+              <br>
+          </div>
+          <div class="col-sm" ></div>
+         
+        </div>
+        <br>
+    
+    </div>
+ 
+  </body>
+  <script src="db.js"></script>
+</html>

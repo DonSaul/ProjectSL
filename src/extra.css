@@ -1,0 +1,47 @@
+
+body{
+    padding-top: 100px;
+
+}
+#Header{
+    text-align: center;
+ 
+    
+}
+
+
+#header2{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding-top: 30px;
+    
+}
+
+
+#login2{
+    
+    color: white;
+    background-color: rgba(47, 48, 48, 0.908);
+    border-radius: 2%;
+    box-shadow:0px 0px 2px 2px rgb(0,0,0); 
+}
+#btnlog{
+    width: 45%;
+    background-color: rgb(25, 201, 9);
+    
+
+
+}
+#btnreg{
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.905);
+    color: black;
+    
+
+
+}
+#botonera{
+
+    text-align: center;
+}
