@@ -1,6 +1,24 @@
 var userpassed = sessionStorage.getItem('Usuario');
 
 
+require('jquery');
+require('@popperjs/core');
+require('bootstrap');
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database : 'dba_lenguaje'
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+
+});
+
 
 var $ = require( "jquery" );
 require('bootstrap');

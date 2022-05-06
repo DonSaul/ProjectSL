@@ -4,11 +4,38 @@
     <meta charset="UTF-8" />
     <title>LSM</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="extra.css" />
+    <link rel="stylesheet" href="extra2.css" />
   
   </head>
   <body>
-    <div id="Header"> <h1>Bienvenido</h1> </div><br>
+    <nav class="navbar navbar-dark bg-dark" >
+      <div class="container-fluid">
+        <a class="navbar-brand">Bienvenido<p id="Nombre"></p></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Menu.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Curso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ejemplo.html" id="dummy" >Practica</a>
+            </li>
+         
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" style="color: red;">Salir</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  <br><br>
    
 
     <div class="container" >  
@@ -16,7 +43,11 @@
           <div class="col-sm" ></div>
           <div class="col-sm" id="login2">
             <p id="header2">Registrate</p>
-              <label for="User" id ="lblog">Usuario</label>
+                  
+            <label for="User" id ="lblog">Id usuario</label>
+            <input type="text" class="form-control" id="user" placeholder="Id de usario" required="true">
+       
+              <label for="Name" id ="lblog">Usuario</label>
               <input type="text" class="form-control" id="user" placeholder="Nombre de usario" required="true">
          
               <label for="User"id ="lblog" >Contraseña</label>
@@ -40,5 +71,5 @@
     </div>
  
   </body>
-  <script src="db.js"></script>
+  <script src="menu.js"></script>
 </html>
