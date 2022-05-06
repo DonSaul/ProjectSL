@@ -24,12 +24,15 @@ function logintest(){
 
                     var user = document.getElementById("user").value;
                     var password = document.getElementById("pass").value;
+                  
                     console.log(user + password);
                     var flag = 0;
                     for (let i = 0; i < rows.length; i++) {
                  
                         if (user === rows[i].user && password === rows[i].pass){
                         console.log('Existe');
+                        sessionStorage.setItem("Usuario", user );
+                        
                         document.location.href = 'Menu.html';
                         flag = 1;
                         }
