@@ -6,11 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="extra.css" />
+
+    <link rel="stylesheet" href="menu.css" />
 </head>
 <body>
-    <a class="btn btn-primary btn-sm "  role="button" id="Usuario" onclick="Usuario()"> Prueba</a>
-    <a class="btn btn-primary btn-sm " href="index.html" role="button" id="btnreg"> Regresar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Bienvenido<p id="Nombre"></p></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Curso</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Practica</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registro</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      
 </body>
 <script src="menu.js"></script>
+
 </html>

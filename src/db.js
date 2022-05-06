@@ -1,4 +1,6 @@
-
+require('jquery');
+require('@popperjs/core');
+require('bootstrap');
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
