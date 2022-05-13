@@ -29,7 +29,19 @@ function Usuario(){
     console.log(userpassed);
 
 }
+
 document.getElementById("Nombre").innerHTML = userpassed;
+
+if (userpassed == 'Admin'){
+  console.log(userpassed);
+
+  document.getElementById("btoculto").style.display = 'block';
+}
+
+
+else {
+  document.getElementById("btoculto").style.display = 'none';
+}
 //  <a class="btn btn-primary btn-sm "  role="button" id="Usuario" onclick="Usuario()"> Prueba</a>
 //<a class="btn btn-primary btn-sm " href="index.html" role="button" id="btnreg"> Regresar</a>
 

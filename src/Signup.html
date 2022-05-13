@@ -23,12 +23,18 @@
               <a class="nav-link" href="#">Curso</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ejemplo.html" id="dummy" >Practica</a>
+              <a class="nav-link" href="prueba_mano1.html" >Practica</a>
             </li>
-         
+
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios.html">Usuarios</a>
+            </li>
+           
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html" style="color: red;">Salir</a>
             </li>
+
+            
            
           </ul>
           
@@ -45,25 +51,25 @@
             <p id="header2">Registrate</p>
                   
             <label for="User" id ="lblog">Id usuario</label>
-            <input type="text" class="form-control" id="user" placeholder="Id de usario" required="true">
+            <input type="text" class="form-control" id="usernuevo" placeholder="Id de usario" required="true">
        
               <label for="Name" id ="lblog">Usuario</label>
-              <input type="text" class="form-control" id="user" placeholder="Nombre de usario" required="true">
+              <input type="text" class="form-control" id="nombrenuevo" placeholder="Nombre de usario" required="true">
          
               <label for="User"id ="lblog" >Contraseña</label>
             
-              <input type="password" class="form-control" id="user" placeholder="Contraseña" required="true">
+              <input type="password" class="form-control" id="passnuevo" placeholder="Contraseña" required="true">
               <br>
               <div class="col" id="botonera" >
-                <a class="btn btn-primary btn-sm "  role="button" id="btnlog" >Completar Registro</a>
+                <a class="btn btn-primary btn-sm "  role="button" onclick="registrar()" >Completar Registro</a>
              
-                <a class="btn btn-primary btn-sm " href="index.html" role="button" id="btnreg"> Regresar</a>
+                <a class="btn btn-primary btn-sm " href="Menu.html" role="button" id="btnreg"> Regresar</a>
              
                
               </div>
               <br>
           </div>
-          <div class="col-sm" ></div>
+          <div class="col-sm" ><p id ="usuarios2"></p></div>
          
         </div>
         <br>
@@ -72,4 +78,5 @@
  
   </body>
   <script src="menu.js"></script>
+  <script src="crud.js"></script>
 </html>

@@ -1,6 +1,9 @@
 require('jquery');
 require('@popperjs/core');
 require('bootstrap');
+const csv = require('csv-parser');
+const fs = require('fs');
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -49,3 +52,76 @@ function logintest(){
 
 
             }
+
+
+
+function userExport(){
+    con.query('SELECT * FROM dba_lenguaje.user', function (error, rows, fields) {
+      if (error) throw error;
+
+      var data=[];
+
+      for (let i = 0; i < rows.length; i++) {
+
+        var id=rows[i].idUser;
+        var user=rows[i].user;
+        var name=rows[i].nombre;
+        var pass=rows[i].pass;
+        var tipo=rows[i].tipo;
+        var calif=rows[i].calif;
+
+        var item= {
+          "idUser": id,
+          "user": user,
+          "name": name,
+          "pass": pass,
+          "tipo": tipo,
+          "calif": calif
+        }
+
+        data.push(item);
+
+      }
+
+      const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+
+      const csvWriter = createCsvWriter({
+          path: 'users.csv',
+          header: [
+            {id: 'idUser', title: 'idUser'},
+            {id: 'user', title: 'user'},
+            {id: 'name', title: 'name'},
+            {id: 'pass', title: 'pass'},
+            {id: 'tipo', title: 'tipo'},
+            {id: 'calif', title: 'calif'},
+          ]
+      });
+
+      csvWriter
+        .writeRecords(data)
+        .then(()=>  alert('Archivo de respaldo exportado'));
+
+    });
+}
+
+  function userImport(){
+
+    fs.createReadStream('users.csv')
+      .pipe(csv())
+      .on('data', (row) => {
+        console.log(row);
+        var query = "INSERT INTO dba_lenguaje.user VALUES("+row.idUser+",'"+row.user+"','"+row.name+"','"+row.pass+"','"+row.tipo+"',"+row.calif+")";
+        console.log(query);
+        con.query("INSERT INTO dba_lenguaje.user VALUES("+row.idUser+",'"+row.user+"','"+row.name+"','"+row.pass+"','"+row.tipo+"',"+row.calif+")",function (error, rows, fields) {
+          if (error) throw error;
+
+        
+        });
+
+      })
+
+      .on('end', () => {
+        alert('Archivo de respaldo importado');
+        
+      });
+  }

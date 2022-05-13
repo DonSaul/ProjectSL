@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú</title>
+    <title>Importar/Exportar Usuarios</title>
     <link rel="stylesheet" href="styles.css" />
 
     <link rel="stylesheet" href="menu.css" />
@@ -43,14 +43,40 @@
       </div>
     </div>
   </nav>
+      
+      
       <br>
 
       <div class="container"> 
           <div class="row">
-              <h1>ejemplo</h1>
+              <h1>Importar/Exportar Usuarios</h1>
+              <br>
+              <br>
+
+              <div class="col-3"></div>
+      <div class="col-3">
+          <br>
+          <br>
+          <br>
+        <div class="col" id="botonera" >
+            <a class="btn btn-primary btn-md " type="submit"  role="button" onclick="userExport()" > Exportar</a>
+         
+          </div>
+      </div>
+      <div class="col-3">
+        <br>
+        <br>
+        <br>
+        <div class="col" id="botonera" >
+            <a class="btn btn-success btn-md " type="submit"  role="button"  onclick="userImport()" > Importar</a>
+         
+          </div>
+      </div>
+      <div class="col-3"></div>
           </div>
       </div>
 </body>
 <script src="menu.js"></script>
+<script src="db.js"></script>
 
 </html>
