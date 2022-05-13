@@ -6,18 +6,25 @@ require('bootstrap');
 var mysql = require('mysql');
 var $ = require( "jquery" );
 require('bootstrap');
+
+const { stringify } = require('querystring');
 // or the shorthand way
+
 const dict = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','X','Z'];
 var calif = 0;
 var test = 1;
 var longi = Object.keys(dict).length
 var numero = Math.floor(Math.random() * longi);
 
-localStorage.setItem("someVarKey", test);
-var test = localStorage.getItem("someVarKey");
 
 
-document.getElementById("headerprueba").innerHTML = test;
+
+
+
+    document.getElementById("headerprueba").innerHTML = test;
+
+
+
 console.log(dict[numero]);
 
 var letra = dict[numero];
@@ -29,59 +36,102 @@ function myFunction() {
 myFunction();
 
 var boton =Math.floor(Math.random() * 4);
+
 console.log(boton);
 
 
 function llenar(){
+
+
+
     var temp1 = Math.floor(Math.random() * longi);
     var temp2 = Math.floor(Math.random() * longi);
-    if (boton == 0 || boton == 1){
-    
-    console.log(correcto);
-    document.getElementById('b1').value = correcto;
-    document.getElementById("b2").value = dict[temp1];
-    document.getElementById("b3").value = dict[temp2];
 
-    }else{
-        if (boton == 2 ){
+    switch(boton) {
+        case 0:
+          // code block
+          document.getElementById('b1').value = correcto;
+          document.getElementById("b2").value = dict[temp1];
+          document.getElementById("b3").value = dict[temp2];
+          break;
+        case 1:
+            document.getElementById('b1').value = correcto;
+            document.getElementById("b2").value = dict[temp1];
+            document.getElementById("b3").value = dict[temp2];
+          // code block
+          break;
+        case 2:
             document.getElementById('b1').value = dict[temp1];
             document.getElementById("b2").value = correcto;
             document.getElementById("b3").value = dict[temp2];
-    }else{
-        if (boton == 3 ){
+            break;
+        case 3:
             document.getElementById('b1').value = dict[temp1];
             document.getElementById("b2").value = dict[temp2];
-            document.getElementById("b3").value = correcto;}
-
+            document.getElementById("b3").value = correcto;
+                break;
+        default:
+            console.log('default');
+          // code block
+          break;
+      }
+    
     }
 
-}
-}
+
+
 llenar();
 
 
     function updateDiv()
     { 
-        console.log (`funciona?`);
-        test =test+1;
+      
+    
+        
+        
         location.reload();
-
+    }
    
-    } 
+    
 
+    
+    function verificar1(){
+        
+      var res =document.getElementById('b1').value;
+      if(res == correcto){
+        alert(`Muy Bien`);
+        updateDiv();
 
-    function verificar(){
-        var res = document.getElementById('b1').value;
-        var res2 = document.getElementById('b2').value;
-        var res3 = document.getElementById('b3').value;
-         if(res == correcto || res2 == correcto || res3 == correcto){
-
-            alert(`Muy Bien`);
-         
-            updateDiv();
-         }else{
-             alert("vuelve a intentarlo");
-         }
-
+    }else{
+        alert(`Vuelve a intentarlo`);
+        updateDiv();
+    }
 
     }
+
+    function verificar2(){
+        
+        var res =document.getElementById('b2').value;
+        if(res == correcto){
+            alert(`Muy Bien`);
+            updateDiv();
+
+        }else{
+            alert(`Vuelve a intentarlo`);
+            updateDiv();
+        }
+  
+      }
+      function verificar3(){
+        
+        var res =document.getElementById('b3').value;
+        if(res == correcto){
+            alert(`Muy Bien`);
+            updateDiv();
+
+        }else{
+            alert(`Vuelve a intentarlo`);
+            updateDiv();
+        }
+  
+      }
