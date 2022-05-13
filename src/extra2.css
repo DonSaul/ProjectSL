@@ -33,6 +33,13 @@ body{
 
 
 }
+#btnlog2{
+    width: 100%;
+    background-color: rgb(25, 201, 9);
+    
+
+
+}
 #btnreg{
     width: 45%;
     background-color: rgba(255, 255, 255, 0.905);
@@ -42,6 +49,27 @@ body{
 
 }
 #botonera{
+
+    text-align: center;
+}
+#headerprueba{
+
+    text-align: center;
+}
+#textoinfo{
+
+
+    text-align: justify;
+}
+#answer-buttons{
+
+text-align: center;
+width: auto;
+
+
+}
+#prueba{
+
 
     text-align: center;
 }

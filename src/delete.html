@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LSM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="extra2.css" />
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark" >
+      <div class="container-fluid">
+        <a class="navbar-brand">Bienvenido<p id="Nombre"></p></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Menu.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Curso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prueba_mano1.html" >Practica</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="usuarios.html">Usuarios</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" style="color: red;">Salir</a>
+            </li>
+
+            
+           
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  <br><br>
+   
+
+    <div class="container" >  
+        <div class="row">
+          <div class="col-sm" ></div>
+          <div class="col-sm" id="login2">
+            <p id="header2">Registrate</p>
+         
+            <label for="User" id ="lblog">Id usuario</label>
+            <input type="text" class="form-control" id="selector" placeholder="Id de usario" required="true">
+            <a class="btn btn-primary btn-sm "  role="button" onclick="Edicion()" >Edición</a><br>
+
+
+            <label for="User" id ="lblog">acceso de usuario</label>
+            <input type="text" class="form-control" id="usernuevo" placeholder="Id de usario" required="true">
+       
+              <label for="Name" id ="lblog">Usuario</label>
+              <input type="text" class="form-control" id="nombrenuevo" placeholder="Nombre de usuario" required="true">
+         
+              <label for="User"id ="lblog" >Contraseña</label>
+            
+              <input type="password" class="form-control" id="passnuevo" placeholder="Contraseña" required="true">
+              <br>
+              <div class="col" id="botonera" >
+                <a class="btn btn-primary btn-sm "  role="button" onclick="borrar()" >Eliminar</a>
+             
+                <a class="btn btn-primary btn-sm " href="Signup.html" role="button" id="btnreg"> Regresar</a>
+             
+               
+              </div>
+              <br>
+          </div>
+          <div class="col-sm" >
+            <table id="my_table" class="table table-dark">
+            <tr>
+              <th>Id</th>
+              <th>Usuario</th>
+              <th>Nombre</th>
+              <th>Contraseña</th>
+            </tr>
+          </table>
+        </div>
+         
+        </div>
+        <br>
+    
+    </div>
+ 
+  </body>
+  <script src="menu.js"></script>
+  <script src="crud.js"></script>
+</html>

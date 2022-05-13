@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú</title>
     <link rel="stylesheet" href="styles.css" />
-
+    <link rel="stylesheet" href="extra2.css" />
     <link rel="stylesheet" href="menu.css" />
+    
 </head>
 <body>
   <nav class="navbar navbar-dark bg-dark" >
@@ -18,19 +19,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Menu.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Curso</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="prueba_mano1.html" >Practica</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="usuarios.html">Usuarios</a>
-          </li>
+      
          
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html" style="color: red;">Salir</a>
@@ -45,12 +34,29 @@
   </nav>
       <br>
 
-      <div class="container"> 
-          <div class="row">
-              <h1>ejemplo</h1>
+      <div class="container" id="prueba"> 
+        <div class="row">
+          <div class="col-sm" ></div>
+          <div class="col-sm" ><h1 id="headerprueba" >Prueba</h1>
+            <h1 id="letra" ><p></p></h1>
+            <img id="myImg" src="" width="200" height="120">
+           <br>
+           <br>
+           <div id="botonerar">
+              <input type="button"  id="b1" class="btn btn-secondary" onclick="valor()"></button>
+          
+              <input type="button" id="b2" class="btn btn-secondary" ></button>
+              <input type="button" id="b3" class="btn btn-secondary" ></button>
+            </div>
+          
           </div>
+          
+            
+            <div class="col-sm" ></div>
+        </div>
       </div>
 </body>
 <script src="menu.js"></script>
+<script src="dict.js"></script>
 
 </html>
