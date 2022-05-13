@@ -8,11 +8,16 @@ var $ = require( "jquery" );
 require('bootstrap');
 // or the shorthand way
 const dict = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','V','W','Y','X','Z'];
-
+var calif = 0;
+var test = 1;
 var longi = Object.keys(dict).length
 var numero = Math.floor(Math.random() * longi);
 
-document.getElementById("letra").innerHTML = dict[numero];
+localStorage.setItem("someVarKey", test);
+var test = localStorage.getItem("someVarKey");
+
+
+document.getElementById("headerprueba").innerHTML = test;
 console.log(dict[numero]);
 
 var letra = dict[numero];
@@ -54,3 +59,29 @@ function llenar(){
 }
 llenar();
 
+
+    function updateDiv()
+    { 
+        console.log (`funciona?`);
+        test =test+1;
+        location.reload();
+
+   
+    } 
+
+
+    function verificar(){
+        var res = document.getElementById('b1').value;
+        var res2 = document.getElementById('b2').value;
+        var res3 = document.getElementById('b3').value;
+         if(res == correcto || res2 == correcto || res3 == correcto){
+
+            alert(`Muy Bien`);
+         
+            updateDiv();
+         }else{
+             alert("vuelve a intentarlo");
+         }
+
+
+    }
